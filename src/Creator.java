@@ -1,10 +1,10 @@
-public class Creator {
+public class Creator extends Person {
     private String name;
     private String role;
     private int experience;
     private Residence residence;
-
-    public Creator(String name, String role, int experience, Residence residence) {
+    public Creator(String name, String role, int experience, Residence residence, int age) {
+        super(age);
         this.name = name;
         this.role = role;
         this.experience = experience;
@@ -36,7 +36,7 @@ public class Creator {
     }
     public void display() {
         System.out.println("Creator: " + name + ", Role: " + role +
-                ", Experience: " + experience + " years");
+                ", Experience: " + experience + " years" + " Age: " + getAge());
         residence.display();
     }
 }
